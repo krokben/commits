@@ -1,9 +1,10 @@
 import "./App.css";
+import Commits from "./components/commits/commits.component";
 
 function App() {
   return (
     <>
-      <div>GitHub Commits</div>
+      <Commits />
     </>
   );
 }
