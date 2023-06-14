@@ -3,4 +3,5 @@ export enum Status {
   Fetching = "Fetching",
   Success = "Success",
   Fail = "Fail",
+  NotFound = "NotFound",
 }

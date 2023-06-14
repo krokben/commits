@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import { useCommits } from "../../hooks/commits.hooks";
 import StatusBoundary from "../status/status.component";
 
@@ -10,7 +11,9 @@ const Commits: FC = () => {
       <ul>
         {commits.map(({ id, message, author, date }) => (
           <li key={id}>
-            {message} {author} {date}
+            <Link to={`commits/${id}`}>
+              {message} {author} {date}
+            </Link>
           </li>
         ))}
       </ul>

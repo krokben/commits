@@ -7,15 +7,20 @@ const StatusBoundary = ({
 }: {
   children: ReactNode;
   status: Status;
-}) =>
-  status === Status.Idle ? (
-    <></>
-  ) : status === Status.Fetching ? (
-    <p>Fetching data...</p>
-  ) : status === Status.Fail ? (
-    <p>Something went wrong.</p>
-  ) : (
-    <>{children}</>
-  );
+}) => {
+  if (status === Status.Idle) {
+    return <></>;
+  }
+  if (status === Status.Fetching) {
+    return <p>Fetching data...</p>;
+  }
+  if (status === Status.Fail) {
+    return <p>Something went wrong.</p>;
+  }
+  if (status === Status.NotFound) {
+    return <p>Not found.</p>;
+  }
+  return <>{children}</>;
+};
 
 export default StatusBoundary;
