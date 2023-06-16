@@ -1,0 +1,74 @@
+.commitDetails {
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  gap: 4rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.authorImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.authorName {
+  font-weight: 700;
+}
+
+.date {
+  font-weight: 300;
+}
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0;
+}
+
+.stats {
+  padding-left: 0;
+  list-style: none;
+}
+
+.files {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.filename {
+  word-wrap: break-word;
+}
+
+.fileStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 0.5rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.fileStat {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--color-beige);
+}
+
+.fileStatValue {
+  padding: 0.25rem;
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+.fileStatValueDeletion {
+  background: var(--color-beige-dark);
+}

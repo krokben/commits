@@ -23,7 +23,7 @@ export interface CommitResponseItem {
     message: string;
     author: { date: string };
   };
-  author: { login: string; avatar: string };
+  author: { login: string; avatar_url: string };
   stats: {
     total: number;
     additions: number;
