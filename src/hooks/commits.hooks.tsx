@@ -16,7 +16,9 @@ export const useCommits = (): CommitsUtils => {
     try {
       setStatus(Status.Fetching);
       const response = await fetch(
-        `https://api.github.com/repos/${env.VITE_OWNER}/${env.VITE_REPO}/commits`
+        `https://api.github.com/repos/${env.VITE_OWNER ?? "krokben"}/${
+          env.VITE_REPO ?? "commits"
+        }/commits`
       );
 
       if (!response.ok) {
@@ -67,7 +69,9 @@ export const useCommit = (): CommitUtils => {
     try {
       setStatus(Status.Fetching);
       const response = await fetch(
-        `https://api.github.com/repos/${env.VITE_OWNER}/${env.VITE_REPO}/commits/${id}`
+        `https://api.github.com/repos/${env.VITE_OWNER ?? "krokben"}/${
+          env.VITE_REPO ?? "commits"
+        }/commits/${id}`
       );
 
       if (!response.ok) {
